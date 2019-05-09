@@ -1,0 +1,20 @@
+---
+- name: Junos to Netbox import
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+
+  - name: Save Junos Configs
+    junos_get_config:
+     user: "{{ ADMUSER }}"
+     passwd: "{{ ADMPASS }}"
+     host: "{{ ansible_host }}"
+     port: 22
+     logfile: "{{ inventory_hostname }}.log"
+     format: xml
+     dest: "{{ inventory_hostname }}.xml"
+
+  - name: Run import
+    script: "junos-to-netbox.py {{ inventory_hostname }}.xml"

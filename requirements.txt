@@ -1,0 +1,9 @@
+certifi==2019.3.9
+chardet==3.0.4
+idna==2.8
+ipaddress==1.0.22
+git+https://github.com/mtucker502/junos-tools@0.1#egg=junos-tools
+lxml==4.3.3
+python-netbox==0.0.13
+requests==2.21.0
+urllib3==1.24.3
