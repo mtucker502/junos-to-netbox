@@ -17,7 +17,7 @@ the configuration file so they are hardcoded for now. Change these as needed for
 
 # Ansible
 
-Also provided is an Ansible playbooy to demonstrate the capabilities of automatically pulling the configs and 
+Also provided is an Ansible playbook to demonstrate the capabilities of automatically pulling the configs and 
 then importing the interface/IP data into Netbox
 
 # Notes
